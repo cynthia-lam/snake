@@ -19,12 +19,21 @@ const setupInput = function (conn) {
       'd': 'right'
     };
 
+    const sayKeys = {
+      '1': 'haha!',
+      '2': ':D',
+      '3': ':('
+    };
+
     if (key === '\u0003') {
       process.exit();
     }
     if (moveKeys[key]) {
       // console.log(`${key} was pressed`);
       conn.write(`Move: ${moveKeys[key]}`);
+    }
+    if (sayKeys[key]) {
+      conn.write(`Say: ${sayKeys[key]}`);
     }
   };
 
