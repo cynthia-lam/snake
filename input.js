@@ -1,4 +1,5 @@
-const connect = require("./client");
+const connect = require('./client');
+const { MOVE_UP_KEY, MOVE_DOWN_KEY, MOVE_LEFT_KEY, MOVE_RIGHT_KEY, TAUNT_1_KEY, TAUNT_2_KEY, TAUNT_3_KEY } = require('./constants');
 
 // Stores the active TCP connection object.
 let connection;
@@ -13,16 +14,16 @@ const setupInput = function (conn) {
 
   const handleUserInput = function (key) {
     const moveKeys = {
-      'w': 'up',
-      's': 'down',
-      'a': 'left',
-      'd': 'right'
+      [MOVE_UP_KEY]: 'up',
+      [MOVE_DOWN_KEY]: 'down',
+      [MOVE_LEFT_KEY]: 'left',
+      [MOVE_RIGHT_KEY]: 'right'
     };
 
     const sayKeys = {
-      '1': 'haha!',
-      '2': ':D',
-      '3': ':('
+      [TAUNT_1_KEY]: 'haha!',
+      [TAUNT_2_KEY]: ':D',
+      [TAUNT_3_KEY]: ':('
     };
 
     if (key === '\u0003') {
