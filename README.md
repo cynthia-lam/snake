@@ -1,4 +1,4 @@
-# Snake Client Project
+# Snake Client Project 🐍🐍🐍
 
 Snake is a popular old school game where the player maneuvers a dot and grows it by ‘eating’ pieces of food. As it moves and eats, it grows and grows. The goal is to become as big as possible without bumping into the side walls, or itself, or else it dies!
 
